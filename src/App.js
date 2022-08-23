@@ -5,9 +5,9 @@ import List from './components/list';
 function App() {
   const [persons, setPersons] = useState([])
   useEffect(()=>{
-    fetch("http://localhost:9000/names")
-    .then((response)=> response.json())
-    .then((names)=> setPersons(names))
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((names) => setPersons(names));
   }, [])
   const clear = ()=>{
     setPersons([])

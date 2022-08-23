@@ -1,13 +1,14 @@
 function List ({persons}){
   let nameList = persons.map((person)=>{
-    const {id, name, image, age} = person;
+    const {id, name, email, username} = person;
 
     return (
       <article key={id}>
-        <img src={image} alt={name} />
+        <img src={`https://robohash.org/${id}?set=set2`} alt={name} />
         <div>
           <h3>{name}</h3>
-          <p>{age}</p>
+          <p>{username}</p>
+          <p>{email}</p>
         </div>
       </article>
     );
