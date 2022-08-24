@@ -13,6 +13,9 @@ function List ({persons}){
       </article>
     );
   });
+  if(persons.length === 0){
+    return <h1 className="heading">no birthdays today</h1>;
+  }
  
   return (
     <section className="box">
